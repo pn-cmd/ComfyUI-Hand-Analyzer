@@ -1,0 +1,10 @@
+mediapipe>=0.10.14
+numpy>=1.24
+Pillow>=10.0
+opencv-python-headless>=4.8
+scikit-image>=0.22
+scipy>=1.11
+torch>=2.0
+torchvision>=0.15
+openai>=1.0
+httpx>=0.25
