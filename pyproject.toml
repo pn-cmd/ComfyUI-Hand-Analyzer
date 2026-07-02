@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "comfyui-hand-analyzer"
+version = "0.1.0"
+description = "ComfyUI custom node pack for hand and finger analysis — detects missing/extra fingers and structural deformities using a hybrid MediaPipe + VLM approach."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+dependencies = [
+    "mediapipe>=0.10.14",
+    "numpy>=1.24",
+    "Pillow>=10.0",
+    "opencv-python-headless>=4.8",
+    "torch>=2.0",
+    "torchvision>=0.15",
+]
+
+[project.optional-dependencies]
+vlm = [
+    "openai>=1.0",
+    "httpx>=0.25",
+]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "pytest-asyncio>=0.21",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["hand_analyzer*", "nodes*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
