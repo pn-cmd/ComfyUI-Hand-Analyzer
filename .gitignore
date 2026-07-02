@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Type checking
+.mypy_cache/
+pyrightconfig.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Models (download separately)
+models/
+*.task
+
+# Test fixtures (generated images)
+tests/fixtures/ai_generated/
+tests/fixtures/realistic/
+image_report_output/
+
+# Generated reports
+*_test_report.html
+*_report.html
