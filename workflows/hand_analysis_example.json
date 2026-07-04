@@ -1,0 +1,30 @@
+{
+  "prompt": {
+    "1": {
+      "inputs": {
+        "image": "hand_test.png"
+      },
+      "class_type": "LoadImage",
+      "_meta": {
+        "title": "Load Image"
+      }
+    },
+    "2": {
+      "inputs": {
+        "image": [
+          "1",
+          0
+        ],
+        "use_vlm": true,
+        "vlm_model": "gpt-4o",
+        "vlm_api_key": "",
+        "vlm_base_url": "",
+        "mediapipe_model_path": "models/hand_landmarker.task",
+        "max_hands": 4,
+        "min_detection_confidence": 0.5
+      },
+      "class_type": "HandAnalysis",
+      "_meta": {
+        "title": "Hand Analysis 🔍"
+      }
+    }
